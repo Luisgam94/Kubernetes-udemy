@@ -1,0 +1,17 @@
+<div id="id01"></div>
+<img src="https://w7.pngwing.com/pngs/804/119/png-transparent-kubernetes-software-deployment-docker-computer-cluster-rackn-kubernetes-text-logo-cloud-computing.png">
+<script>
+var xmlhttp = new XMLHttpRequest();
+var url = "http://127.0.0.1:49761/";
+
+xmlhttp.onreadystatechange = function() {
+    console.log(JSON.parse(this.responseText))
+    if (this.readyState == 4 && this.status == 200) {
+        var resp = JSON.parse(this.responseText);
+        document.getElementById("id01").innerHTML = "<h2>La hora es " + resp.time + "y el hostname es " + resp.hostname + "</h2>";
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+</script>

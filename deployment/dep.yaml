@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kin: Deployment
+kind: Deployment
 metadata:
   annotations:
     kubernetes.io/change-cause: "Changes port to 110"
@@ -11,13 +11,13 @@ spec:
   selector:
     matchLabels:
       app: front
-    template:
-      metadata:
-        labels:
-          app: front
-      spec:
-        containers:
-        - name: nginx
-          image: nginx:alpine
-          ports:
-            - containerPort: 110
+  template:
+    metadata:
+      labels:
+        app: front
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:alpine
+        ports:
+           - containerPort: 110

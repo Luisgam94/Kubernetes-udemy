@@ -17,6 +17,7 @@ metadata:
   labels:
     app: backend
     env: dev
+spec:    
   containers:
   - name: cont1
-    image: nginx:alpine  
+    image: nginx:alpine

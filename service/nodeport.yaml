@@ -1,6 +1,6 @@
 
 apiVersion: apps/v1
-kin: Deployment
+kind: Deployment
 metadata:
   name: deployment-test1
   labels:
@@ -20,7 +20,7 @@ spec:
           image: nginx:alpine
 ---
 apiVersion: v1
-kin: Service
+kind: Service
 metadata:
   name: my-service1
   labels:
